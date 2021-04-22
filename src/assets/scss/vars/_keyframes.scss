@@ -1,0 +1,14 @@
+@keyframes flashButton {
+  0% {
+    opacity: 1;
+    transform: scale(1.01);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
