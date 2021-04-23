@@ -1,0 +1,19 @@
+.home{
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  .quiz-container{
+    width: 100%;
+    #quiz-header{
+      background-color: dodgerblue;
+    }
+    #quiz-main{
+      background-color: #3939c7;
+    }
+    section.questions{
+      display: flex;
+      justify-content: center;
+    }
+
+  }
+}

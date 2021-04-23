@@ -1,2 +1,11 @@
 @import '~@/assets/scss/vars/_colors.scss';
+@import '~@/assets/scss/vars/_mixin.scss';
 @import '~@/assets/scss/vars/_commons.scss';
+@import '~@/assets/scss/vars/_typography.scss';
+@import '~@/assets/scss/vars/_keyframes.scss';
+
+@import '~@/assets/scss/partials/button.scss';
+@import '~@/assets/scss/partials/question.scss';
+@import '~@/assets/scss/partials/answers.scss';
+
+@import '~@/assets/scss/layouts/home.scss';

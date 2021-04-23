@@ -1,0 +1,11 @@
+.questionBox {
+  @include hexagon(15px, 80px);
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  width: 90%;
+  h2{
+    width: 75%;
+    align-self: center;
+  }
+}

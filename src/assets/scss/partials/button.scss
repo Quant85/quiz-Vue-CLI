@@ -1,0 +1,29 @@
+
+.answers {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  min-width: 75%;
+  button {
+    @include hexagon(15px, 80px);
+    font-size: 1rem;
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 37%;
+    border-left: 0rem double transparent;
+    border-right: 0rem double transparent;
+    &:hover:enabled {
+      transform: scale(1.02);
+    }
+    &:focus{
+      outline: none;
+    }
+    &:active:enabled {
+      transform: scale(1.05);
+    }
+  }
+}
+
+button {
+
+}
