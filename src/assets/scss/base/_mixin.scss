@@ -1,5 +1,7 @@
+@use "sass:math";
+
 @mixin hexagon($width, $height, $color:transparent){
-  height: $height;
+  min-height: $height;
   padding: 0 $width;
   background: $color;
   display: inline-block;
@@ -12,8 +14,8 @@
   &:before, &:after {
     position: absolute;
     content: "";
-    height: ($height / 2);
-    width: ($height / 2) ;
+    height: (($height - 8) / math.sqrt(2));
+    width: ($height / math.sqrt(2)) ;
     top: 50%;
     pointer-events: none;
     /*border-top: $height / 2 solid transparent;
@@ -27,7 +29,7 @@
     transform-origin: 0 0;
     border-top: 4px solid white;
     border-right: 4px solid white;
-    transform: rotate(57.5deg)skew(30deg);
+    transform: rotate(47deg)skew(-2deg);
     border-radius: 2px;
     //border-right: $height / 2 solid $color;
   }
@@ -39,13 +41,28 @@
     transform-origin: 0 0;
     border-bottom: 4px solid white;
     border-left: 4px solid white;
-    transform: rotate(58deg) skew(30deg);
+    transform: rotate(47deg) skew(-2deg);
     border-radius: 2px;
   }
 }
 
-@mixin font-p($font-family:('Roboto,'sans-serif),$weight:400,$color:white){
+@mixin font-p($font-family:('Roboto,'sans-serif),$weight:400,$color:white, $size:0.8rem){
   font-family: $font-family;
   font-weight: $weight;
+  font-size: $size;
   color: $color;
+}
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{
+    inspect(map-get($breakpoints, $breakpoint))
+    } {
+      @content;
+    }
+  }
+  @else {
+    @warn "Questo valore non può esser recuperato da `#{$breakpoint}`."
+            + "i breakpoint disponibili sono: `#{map-keys($breakpoints)}`";
+  }
 }

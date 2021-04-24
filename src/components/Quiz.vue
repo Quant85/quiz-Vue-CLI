@@ -6,7 +6,7 @@
         id="logo-quiz"
         alt="Vue logo"
         src="../assets/logo.png"
-        style="max-width: 12rem"
+        style="max-width: 15%"
       />
     </header>
     <main id="quiz-main">

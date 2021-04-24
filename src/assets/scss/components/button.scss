@@ -1,17 +1,19 @@
+@use "../base/mixin" as *;
 
 .answers {
   display: flex;
   flex-flow: wrap;
   justify-content: space-between;
-  min-width: 75%;
+  min-width: 55%;
+
   button {
     @include hexagon(15px, 80px);
-    font-size: 1rem;
+    @include font-p('Zen Dots', 400, white,1rem);
     padding: 1rem;
-    margin: 1rem 0;
+    margin: 0.4rem 0;
     width: 37%;
-    border-left: 0rem double transparent;
-    border-right: 0rem double transparent;
+    border-left: 0 double transparent;
+    border-right: 0 double transparent;
     &:hover:enabled {
       transform: scale(1.02);
     }
@@ -24,6 +26,3 @@
   }
 }
 
-button {
-
-}

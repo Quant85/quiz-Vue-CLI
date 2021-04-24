@@ -1,9 +1,10 @@
 .questionBox {
   @include hexagon(15px, 80px);
+  @include font-p('Roboto', 400, white, 0.6rem);
   display: flex;
   justify-content: center;
-  margin: 2rem 0;
-  width: 90%;
+  margin: 1rem 0;
+  min-width: 50%;
   h2{
     width: 75%;
     align-self: center;

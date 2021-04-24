@@ -1,13 +1,16 @@
 .home{
   display: flex;
   justify-content: center;
-  width: 100vw;
+  align-content: space-between;
   .quiz-container{
     width: 100%;
+    height: 100%;
     #quiz-header{
+      min-height: 33%;
       background-color: dodgerblue;
     }
     #quiz-main{
+      min-height: 67%;
       background-color: #3939c7;
     }
     section.questions{
